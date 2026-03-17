@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Event Listeners
 function setupEventListeners() {
     // Chat functionality
+    document.getElementById('newChatBtn').addEventListener('click', createNewSession);
     sendButton.addEventListener('click', sendMessage);
     chatInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') sendMessage();
@@ -125,7 +126,7 @@ function addMessage(content, type, sources = null, isWelcome = false) {
         html += `
             <details class="sources-collapsible">
                 <summary class="sources-header">Sources</summary>
-                <div class="sources-content">${sources.join(', ')}</div>
+                <div class="sources-content">${sources.map(renderSource).join('')}</div>
             </details>
         `;
     }
@@ -135,6 +136,13 @@ function addMessage(content, type, sources = null, isWelcome = false) {
     chatMessages.scrollTop = chatMessages.scrollHeight;
     
     return messageId;
+}
+
+function renderSource(source) {
+    if (source.url) {
+        return `<a class="source-tag" href="${source.url}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.label)}</a>`;
+    }
+    return `<span class="source-tag">${escapeHtml(source.label)}</span>`;
 }
 
 // Helper function to escape HTML for user messages

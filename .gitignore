@@ -1,6 +1,7 @@
 # Environment variables
 .env
 backend/.env
+CLAUDE.local.md
 
 # Python
 __pycache__/

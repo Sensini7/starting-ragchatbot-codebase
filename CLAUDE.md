@@ -3,6 +3,28 @@
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ---
+# Rules
+
+## Planning and Execution Protocol
+
+For every new feature implementation or code edit:
+
+1. **Always plan first** — use Plan Mode (`/plan`) to research the codebase and design the approach before writing any code.
+
+2. **End every plan with a numbered To-Do list** — the last section of every plan must be a `## To-Do` checklist listing each discrete file change as a numbered step. Example:
+   ```
+   ## To-Do
+   1. [ ] Edit `frontend/index.html` — add button element
+   2. [ ] Edit `frontend/style.css` — add button styles
+   3. [ ] Edit `frontend/script.js` — wire event listener
+   4. [ ] Append Step N to `TUTORIAL.md`
+   ```
+
+3. **Upon plan approval, execute the To-Do list step by step** — work through each item in order, checking it off mentally before moving to the next. Do not skip steps or batch unrelated changes.
+
+4. **Confirm completion** — after all steps are done, state which To-Do items were completed so the user can verify nothing was missed.
+
+---
 
 ## What This Project Is
 
@@ -228,3 +250,4 @@ Or delete `backend/chroma_db/` and restart the server — the startup event will
 - **Embedding model runs locally** — `all-MiniLM-L6-v2` is downloaded by `sentence-transformers` on first run (~90MB). No external embedding API is used.
 - **`chroma_db/` is gitignored** — each developer/deployment starts with an empty vector store and ingests on first startup.
 - **`backend/` is the working directory** — `CHROMA_PATH = "./chroma_db"` and `docs_path = "../docs"` in startup event are both relative to `backend/`, not repo root. Run the server from `backend/` or via `run.sh` which handles this.
+
