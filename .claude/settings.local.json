@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd \"/c/Users/Personal/Desktop/Amazon Connect/ClaudeCode/starting-ragchatbot-codebase\" && ./run.sh)",
+      "Bash(curl -s -X POST http://localhost:8000/api/query -H \"Content-Type: application/json\" -d '{\"query\": \"test\"}' | python -m json.tool 2>/dev/null || curl -s -X POST http://localhost:8000/api/query -H \"Content-Type: application/json\" -d '{\"query\": \"test\"}')",
+      "Bash(curl -s -X POST http://localhost:8000/api/query -H \"Content-Type: application/json\" -d '{\"query\": \"what is the outline of the MCP: Build Rich-Context AI Apps with Anthropic course\"}' | python -m json.tool 2>/dev/null)",
+      "Bash(pkill -f \"uvicorn app:app\" 2>/dev/null; sleep 2; echo \"killed\")",
+      "Bash(curl -s -X POST http://localhost:8000/api/query -H \"Content-Type: application/json\" -d \"{\\\\\"query\\\\\": \\\\\"what is the outline of the MCP: Build Rich-Context AI Apps with Anthropic course\\\\\"}\")",
+      "Bash(taskkill /F /PID 9728 /PID 15828 2>/dev/null; sleep 1; echo \"killed\")",
+      "Read(//c/Users/Personal/.local/bin//**)",
+      "Read(//c/Users/Personal/AppData/Roaming/uv/**)",
+      "Read(//c/Users/Personal/AppData/Local/uv/**)",
+      "Bash(cd:*)",
+      "Read(//c/Users/Personal/.local/bin/**)",
+      "Bash(ls /c/Users/Personal/AppData/Roaming/uv/bin/uv*)",
+      "Bash(cmd //c \"where uv\")",
+      "Bash(curl:*)",
+      "Bash(taskkill:*)",
+      "Bash(cmd //c \"taskkill /F /IM python.exe\" 2>&1; echo \"done\")",
+      "mcp__playwright__browser_navigate",
+      "Bash(cmd.exe /c \"where uv\")",
+      "Read(//c/Users/Personal/.cargo/bin/**)",
+      "Bash(cmd.exe /c \"where python\")",
+      "Read(//c/Users/Personal/AppData/Local/Programs/**)",
+      "Read(//c/Users/Personal/**)",
+      "Bash(netstat -ano)",
+      "mcp__playwright__browser_take_screenshot",
+      "mcp__playwright__browser_click",
+      "mcp__playwright__browser_evaluate",
+      "Bash(cmd.exe /c \"taskkill /F /PID 5936\")",
+      "Bash(cmd.exe /c \"taskkill /F /PID 5936 2>&1\")",
+      "Bash(cmd.exe /c \"taskkill /F /IM python.exe 2>&1\")",
+      "Bash(powershell.exe -Command \"Stop-Process -Id 5936 -Force; Write-Host 'Done'\")",
+      "Bash(cmd.exe /c \"netstat -ano | findstr :8000\")",
+      "Bash(\"C:/Users/Personal/Desktop/Amazon Connect/ClaudeCode/starting-ragchatbot-codebase/TUTORIAL.md\":*)"
+    ]
+  }
+}
